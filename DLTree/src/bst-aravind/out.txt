@@ -1,0 +1,83 @@
+setcpu: cpu=0, counter=0
+## Initial: 1024 / Range: 2048 /
+Sizeof initial: 64.00 KB = 0.06 MB
+setcpu: cpu=6, counter=1
+setcpu: cpu=7, counter=2
+setcpu: cpu=8, counter=3
+setcpu: cpu=9, counter=4
+setcpu: cpu=10, counter=5
+setcpu: cpu=11, counter=6
+setcpu: cpu=12, counter=7
+setcpu: cpu=13, counter=8
+setcpu: cpu=14, counter=9
+setcpu: cpu=15, counter=10
+setcpu: cpu=16, counter=11
+setcpu: cpu=17, counter=12
+setcpu: cpu=18, counter=13
+setcpu: cpu=19, counter=14
+setcpu: cpu=20, counter=15
+setcpu: cpu=21, counter=16
+setcpu: cpu=22, counter=17
+setcpu: cpu=23, counter=18
+setcpu: cpu=24, counter=19
+setcpu: cpu=25, counter=20
+setcpu: cpu=26, counter=21
+setcpu: cpu=5, counter=22
+setcpu: cpu=27, counter=23
+setcpu: cpu=28, counter=24
+setcpu: cpu=29, counter=25
+setcpu: cpu=30, counter=26
+setcpu: cpu=31, counter=27
+setcpu: cpu=32, counter=28
+setcpu: cpu=33, counter=29
+setcpu: cpu=34, counter=30
+setcpu: cpu=35, counter=31
+setcpu: cpu=36, counter=32
+setcpu: cpu=37, counter=33
+setcpu: cpu=38, counter=34
+setcpu: cpu=39, counter=35
+setcpu: cpu=40, counter=36
+setcpu: cpu=41, counter=37
+setcpu: cpu=42, counter=38
+setcpu: cpu=43, counter=39
+setcpu: cpu=44, counter=40
+setcpu: cpu=45, counter=41
+setcpu: cpu=46, counter=42
+setcpu: cpu=47, counter=43
+setcpu: cpu=48, counter=44
+setcpu: cpu=49, counter=45
+setcpu: cpu=50, counter=46
+error in thread cpu=50, tmp=46
+setcpu: cpu=51, counter=47
+error in thread cpu=51, tmp=47
+setcpu: cpu=52, counter=48
+error in thread cpu=52, tmp=48
+setcpu: cpu=53, counter=49
+error in thread cpu=53, tmp=49
+setcpu: cpu=54, counter=50
+error in thread cpu=54, tmp=50
+setcpu: cpu=55, counter=51
+error in thread cpu=55, tmp=51
+setcpu: cpu=56, counter=52
+setcpu: cpu=57, counter=53
+setcpu: cpu=58, counter=54
+setcpu: cpu=4, counter=55
+setcpu: cpu=59, counter=56
+setcpu: cpu=60, counter=57
+setcpu: cpu=61, counter=58
+setcpu: cpu=62, counter=59
+error in thread cpu=62, tmp=59
+setcpu: cpu=63, counter=60
+setcpu: cpu=3, counter=61
+setcpu: cpu=2, counter=62
+setcpu: cpu=1, counter=63
+setcpu: cpu=0, counter=64
+[ALLOC] initializing allocator with fs size: 507 objects
+#BEFORE size is: 1024
+#AFTER  size is: 1023
+    : total      | success    | succ %      | total %     | effective %
+srch: 23717331   | 11853830   |       50.0% |       80.0% | 
+insr: 2964079    | 1479973    |       49.9% |       10.0% |        5.0%
+rems: 2966824    | 1479974    |       49.9% |       10.0% |        5.0%
+#txs 64	(29648234  
+#Mops 29.648

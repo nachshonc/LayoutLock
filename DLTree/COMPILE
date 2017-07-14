@@ -1,0 +1,36 @@
+You may pass the following settings to `make`:
+    * VERSION=	 DEBUG : compile with O0 and debug flags
+      		 SYMBOL :  compile with O3 and -g
+		 O0 : compile with -O0
+		 O1 : compile with -O1
+		 O2 : compile with -O2
+		 O3 : compile with -O3 (default)
+    * OPTIK= 0 : compile with ticket-lock-based OPTIK
+             1 : compile with versioned-lock-based OPTIK
+	     2 : compile with non-atomic TTAS+version OPTIK (version is accessed in critical section)
+    * GC=0 or GC=1 : disable/enable GC (default is 1)
+    * WORKLOAD= 0 : normal uniform workload
+      		1 : workload with phases where everyone is doing insertions
+		2 : skewed workload with zipfian keys (configura skew: ZIPF_ALPHA in random.h)
+    * TEST=old : use the old test.c file (disables GC)
+    * TEST=correct : use the test_correct.c file (enables GC)
+    * LATENCY= 1 : enable per operation latency measurements with getticks
+      	       2 : enable per operation latency measurements with sspfd (only id==0 prints results)
+	       3 : enable per operation latency measurements with sspfd (all cores print results)
+	       4 : enable latency measurements of the parse phase of ops (only id==0 prints results)
+	       5 : enable latency measurements of the parse phase of ops (all cores print results)
+	       6 : enable latency distribution measurements (boxplot)
+    * GRANULARITY=GLOBAL_LOCK (or G=GL) for global lock
+    * INIT=all : initialize the structure from all threads (default is from one)
+    * SET_CPU=0 : does not pin threads to cores (does this by default) 
+    * POWER=1 : enable power measurements with rapl_read library (default is 0)      	    
+    * RO_FAIL=0 : disables read-only unsuccessful updates in linked lists (pugh, lazy, copy) 
+      		  and hash tables (pug, lazy, copy, lea:java)
+    * (STATS not implemented on all data structures yet)
+      STATS=1 : enable extra stats (about retries)
+            2 : enable stats for per-thread completed ops
+	    3 : enable both 1 and 2
+    * PAD=1 : enabled node padding. NB. not all data structures support this properly for now
+    * SEQ_NO_FREE=1 : make the SEQ implementations NOT use the ssmem_free (but uses SSMEM)
+Example:
+	make VERSION=DEBUG GC=0
